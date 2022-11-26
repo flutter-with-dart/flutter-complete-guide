@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
+//menambahkan function
+  void answerQuestions() {
+    print('Answer Choosen !');
+  }
+
   @override
   Widget build(BuildContext context) {
     var questions = [
@@ -19,17 +24,21 @@ class MyApp extends StatelessWidget {
             Text('The Questions!'),
             ElevatedButton(
               child: Text('Answer 1'),
-              onPressed: null,
+              onPressed: answerQuestions,
             ),
             ElevatedButton(
               child: Text('Answer 2'),
-              onPressed: null,
+              onPressed:
+                  answerQuestions, //() => print('Answer 2 chosen'), //anonymous function
             ),
             ElevatedButton(
               child: Text('Answer 3'),
-              onPressed: null,
+              onPressed: answerQuestions, //(){
+              //.....
+              // print('Answer 3 Choosen')
+              //}
             ),
-          ],
+          ], //
         ),
       ),
     );
